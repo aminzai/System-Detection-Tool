@@ -5,5 +5,6 @@ OS_TYPE_DARWIN = 'darwin'
 
 # Distribution name
 DIST_MACOSX = 'macosx'
+DIST_DEBIAN = 'debian'
 
 # Arch Type
