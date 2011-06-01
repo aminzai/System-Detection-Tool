@@ -6,16 +6,17 @@
 import platform
 
 from SystemInfoBase import SystemInfoBase
+from Constant import *
 
 class DarwinSysInfo(SystemInfoBase):
-    def getOsName(self):
+    def getDistName(self):
         """
         @param:
             None
         @return:
-            OS Name(string)
+            Distribution Name(string)
         """
-        raise NotImplementedError
+        return DIST_MACOSX
 
     def getArch(self):
         """
@@ -53,3 +54,4 @@ class DarwinSysInfo(SystemInfoBase):
         """
         raise NotImplementedError
 
+pass

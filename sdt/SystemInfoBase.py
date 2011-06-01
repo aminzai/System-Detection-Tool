@@ -26,7 +26,7 @@ class SystemInfoBase:
         elif OS_TYPE_DARWIN == osType:
             return OS_TYPE_DARWIN
 
-    def getOsName(self):
+    def getDistName(self):
         """
         @param:
             None
