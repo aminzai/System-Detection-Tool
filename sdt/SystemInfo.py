@@ -1,13 +1,15 @@
 from SystemInfoBase import SystemInfoBase
+from DarwinSysInfo import DarwinSysInfo
+from LinuxSysInfoBase import LinuxSysInfoBase
+
 from Constant import *
 
 class SystemInfo(SystemInfoBase):
     def __init__(self):
         if OS_TYPE_DARWIN == self.getOsType():
-            from DarwinSysInfo import DarwinSysInfo
             self.__class__ = DarwinSysInfo
-        if OS_TYPE_LINUX == self.getOsType():
-            from DebianSysInfo import DebianSysInfo
-            self.__class__ = DebianSysInfo
+        elif OS_TYPE_LINUX == self.getOsType():
+            self.__class__ = LinuxSysInfoBase
+            self.__init__()
 
 pass

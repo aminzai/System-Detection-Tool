@@ -5,18 +5,12 @@
 
 import platform
 
-from SystemInfoBase import SystemInfoBase
+from LinuxSysInfoBase import LinuxSysInfoBase
 from Constant import *
 
-class DebianSysInfo(SystemInfoBase):
-    def getDistName(self):
-        """
-        @param:
-            None
-        @return:
-            Distribution Name(string)
-        """
-        return DIST_DEBIAN
+class DebianSysInfo(LinuxSysInfoBase):
+    def __init__(self):
+        pass
 
     def getArch(self):
         """
