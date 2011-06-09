@@ -36,7 +36,7 @@ class DarwinSysInfo(SystemInfoBase):
         """
         return platform.mac_ver()[0]
 
-    def getVersionName(self):
+    def getCodename(self):
         """
         @param
             None

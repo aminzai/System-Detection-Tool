@@ -30,7 +30,7 @@ class DebianSysInfo(LinuxSysInfoBase):
         """
         return platform.dist()[1]
 
-    def getVersionName(self):
+    def getCodename(self):
         """
         @param
             None

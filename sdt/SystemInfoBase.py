@@ -53,7 +53,7 @@ class SystemInfoBase:
         """
         raise NotImplementedError
 
-    def getVersionName(self):
+    def getCodename(self):
         """
         @param
             None
