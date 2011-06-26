@@ -86,4 +86,17 @@ class SystemInfoBase:
 
         return LANG
 
+    def __str__(self):
+        """
+        @param:None
+        @return:all info string
+        """
+        return ("OS Type:"+ self.getOsType() +"\n"
+                +"Dist Name:"+ self.getDistName()+"\n"
+                +"Arch Name:"+ self.getArch()+"\n"
+                +"Version:"+self.getVersion()+"\n"
+                #+"Code Name:"+self.getCodename()+"\n"
+                #+"All user:"+ self.getAllUser()+"\n"
+                +"Locale:" + self.getLocale()+"\n")
+
 pass
