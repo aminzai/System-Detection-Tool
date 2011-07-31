@@ -8,10 +8,18 @@ import platform
 from LinuxSysInfoBase import LinuxSysInfoBase
 from Constant import *
 
-class DebianSysInfo(LinuxSysInfoBase):
+class ArchlinuxSysInfo(LinuxSysInfoBase):
     def __init__(self):
-        print 'debian'
         pass
+
+    def getDistName(self):
+        """
+        @param:
+            None
+        @return:
+            Distribution Name(string)
+        """
+        return DIST_ARCH
 
     def getArch(self):
         """
@@ -29,7 +37,7 @@ class DebianSysInfo(LinuxSysInfoBase):
         @return
             OS's version (string) ex: 10.1
         """
-        return platform.dist()[1]
+        return 'none'
 
     def getCodename(self):
         """
