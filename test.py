@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import unittest
 
 from sdt.SystemInfo import SystemInfo
