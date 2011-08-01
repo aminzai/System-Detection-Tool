@@ -18,10 +18,11 @@ class LinuxSysInfoBase(SystemInfoBase):
             else:
                 # DIST not found
                 pass
-        elif self.getDistName() in ( DIST_DEBIAN , DIST_UBUNTU) :
-            from DebianSysInfo import DebianSysInfo
-            self.__class__ = DebianSysInfo
+        elif self.getDistName() in DIST_DEB_BASE :
+            from DebianBaseSysInfo import DebianBaseSysInfo
+            self.__class__ = DebianBaseSysInfo
             self.__init__()
+        """
         elif self.name == DIST_SUSE:
             #SUSE
             if commands.getoutput('cat /etc/SuSE-release | grep "openSUSE"'):
@@ -43,6 +44,7 @@ class LinuxSysInfoBase(SystemInfoBase):
                commands.getoutput('cat /etc/mandriva-release | grep "Mandriva"'):
                 pass
                 #self.name = DIST_MANDRIVA
+                """
 
     def getDistName(self):
         """

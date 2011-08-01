@@ -4,11 +4,12 @@
 #    For Debian
 
 import platform
+import os
 
 from LinuxSysInfoBase import LinuxSysInfoBase
 from Constant import *
 
-class DebianSysInfo(LinuxSysInfoBase):
+class DebianBaseSysInfo(LinuxSysInfoBase):
     def __init__(self):
         # EZGO
         if os.path.exists('/etc/ezgo-release'):
