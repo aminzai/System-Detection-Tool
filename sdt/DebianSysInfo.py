@@ -10,7 +10,6 @@ from Constant import *
 
 class DebianSysInfo(LinuxSysInfoBase):
     def __init__(self):
-        print 'debian'
         pass
 
     def getArch(self):
