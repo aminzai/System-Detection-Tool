@@ -13,7 +13,7 @@ class TestSystemInfo(unittest.TestCase):
 
     def test_getOsType(self):
         """get os type"""
-        print "OS Type:", self.d.getOsType()
+        print "getOsType", self.d.getOsType()
 
     def test_getDistName(self):
         """ get dist name """
@@ -29,7 +29,7 @@ class TestSystemInfo(unittest.TestCase):
 
     def test_getLocale(self):
         """ getLocale"""
-        print 'd.getLocale()',self.d.getLocale()
+        print 'getLocale',self.d.getLocale()
 
 
 if __name__ == "__main__":
