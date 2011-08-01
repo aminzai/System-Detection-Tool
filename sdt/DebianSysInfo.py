@@ -10,7 +10,10 @@ from Constant import *
 
 class DebianSysInfo(LinuxSysInfoBase):
     def __init__(self):
-        pass
+        # EZGO
+        if os.path.exists('/etc/ezgo-release'):
+            pass
+            #self.name = DIST_EZGO
 
     def getArch(self):
         """

@@ -18,15 +18,10 @@ class LinuxSysInfoBase(SystemInfoBase):
             else:
                 # DIST not found
                 pass
-        elif DIST_DEBIAN == self.getDistName():
+        elif self.getDistName() in ( DIST_DEBIAN , DIST_UBUNTU) :
             from DebianSysInfo import DebianSysInfo
             self.__class__ = DebianSysInfo
             self.__init__()
-        elif self.name == DIST_UBUNTU:
-            # EZGO
-            if os.path.exists('/etc/ezgo-release'):
-                pass
-                #self.name = DIST_EZGO
         elif self.name == DIST_SUSE:
             #SUSE
             if commands.getoutput('cat /etc/SuSE-release | grep "openSUSE"'):
